@@ -1,0 +1,276 @@
+/* Heading 1 Style */
+h1 {
+    font-family: Cambria;
+    text-align: center;
+    background-color: rgb(174, 187, 228);
+    padding: 10px;
+}
+/* Heading 2 Style */
+h2 {
+    font-family: Cambria;
+    background-color: rgb(217, 225, 250);
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+/* Heading 3 Style */
+h3 {
+    font-family: Cambria;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* Heading 4 Style */
+h4 {
+    font-family: Cambria;
+    text-align: center;
+}
+header {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(174, 187, 228);
+}
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(174, 187, 228);
+}
+ul {
+    font-size: 17px;
+    text-align: justify;
+}
+u {
+    color: rgb(188, 0, 0);
+}
+li {
+    font-family: Cambria;
+}
+.background {
+    display: flex;
+    flex-direction: row;
+}
+.text {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+.image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+    margin-top: 12px;
+}
+.image1 {
+    flex: 1;
+    max-width: 320px;
+    height: auto;
+    margin-right: 20px;
+}
+.image2 {
+    flex: 1;
+    max-width: 320px;
+    height: auto;
+}
+.image3 {
+    flex: 1;
+    max-width: 320px;
+    height: auto;
+    margin-right: 20px;
+}
+.image4 {
+    flex: 1;
+    max-width: 320px;
+    height: auto;
+}
+.findings {
+    display: flex;
+    flex-direction: row;
+}
+.text_2 {
+    margin-right: 20px;
+}
+.image5 {
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+.image6 {
+    flex: 1;
+    max-width: 300px;
+    height: auto;
+}
+.images {
+    display: flex;
+    flex-direction: row;
+}
+.image7 {
+    flex: 1.5;
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+.image8 {
+    flex: 0.5;
+    max-width: 150px;
+    height: auto;
+}
+.image9 {
+    flex: 0.5;
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+.image10 {
+    flex: 0.5;
+    max-width: 150px;
+    height: auto;
+}
+span {
+    margin-left: 10px;
+}
+.tooltip {
+    position: absolute;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Cambria;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.tooltip_chart {
+    position: absolute;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 14px;
+    font-family: Cambria;
+    display: none;
+}
+path.selected {
+    fill: yellow !important;
+}
+.map_elements {
+    display: flex;
+    flex-direction: row;
+}
+.map_elements svg {
+    width: 100%;
+    height: auto;
+}
+.map {
+    flex: 3;
+    min-width: 300px;
+}
+.chart_elements {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 700px;
+}
+.chart {
+    flex: 2;
+    justify-content: center;
+}
+.legend_chart {
+    flex: 0.7;
+    justify-content: center;
+    gap: 15px;
+    font-family: Cambria;
+    font-size: 16px;
+}
+.data_table {
+    flex: 1;
+}
+table.custom-table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-family: Cambria;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+table.custom-table th {
+    background-color: rgb(205, 209, 220);
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+table.custom-table td {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+table.custom-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+#pieChart {
+    margin-left: 40px;
+}
+#CommunityCentres {
+    background-color: rgb(255, 230, 131);
+    color: black;
+}
+#CHASClinics {
+    background-color: rgb(131, 207, 255);
+    color: black;
+}
+#EldercareCentres {
+    background-color: rgb(197, 131, 255);
+    color: black;
+}
+/* Style content of collapsible button */
+.collapsible {
+    background-color: rgb(217, 225, 250);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 24px;
+    font-family: Cambria;
+    font-weight: bold;
+}
+/* Style bg color of button when hovering over */ 
+.active, .collapsible:hover {
+    background-color: rgb(204, 212, 235);
+}
+/* Style content within collapsible window */  
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+.takeaways{
+    min-width: 200px;
+}
+.layer-option {
+    margin: 4px 0;
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  
+  .layer-option input[type="checkbox"] {
+    margin-right: 6px;
+  }
+  
+  .color-box {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    margin-right: 6px;
+    border: 1px solid #ccc;
+  }
