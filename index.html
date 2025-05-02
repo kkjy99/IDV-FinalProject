@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title> Availability of Amenities in Singapore </title>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+        <link rel = "stylesheet" href = "style.css">
+        <script src = "https://d3js.org/d3.v7.min.js"> </script>
+    </head>
+
+    <body>
+        <header>
+            <h1> Amenities in Singapore </h1>
+        </header>
+
+        <h2 style = "text-align: center; background-color: rgb(230, 230, 230);">
+            Background
+        </h2>
+
+        <div class = "background">
+            <div class = "text">
+                <h3 style = "background-color: rgb(255, 241, 176); padding: 10px;">
+                    Singapore has provided various forms of amenities for its residents, such as community centres, clinics, playgrounds and parks. 
+                    While there are a variety of amenities provided for the general public, there are some which might be more frequented by older adults, such as
+                    community centres, clinics and eldercare services (day care centres, active ageing centres etc.).
+                    <br>
+                    <br>
+                    Over the years, Singapore has developed infrastructure and implemented policies to promote and enable ageing-in-place for older adults.
+                    This provides opportunities for this diverse group of individuals to age well and healthily within their communities.
+                </h3>
+                <div class = "images">
+                    <img class = "image7" src = "images/seniors_1.png" >
+                    <img class = "image8" src = "images/exercise_1.png">
+                    <img class = "image9" src = "images/exercise_2.png" >
+                    <img class = "image10" src = "images/seniors_3.png">
+                </div>
+            </div>
+
+            <div class = "image"> 
+                <img class = "image1" src = "images/community_garden_cropped.jpg" >
+                <img class = "image2" src = "images/AAC_cropped.jpg">
+            </div>
+        </div>
+
+        <div class = "background"> 
+            <div class = "text" >
+                <h3 style = "background-color: rgb(255, 241, 176); padding: 10px;">
+                    With changing demographics in different regions and estates around the island, it would be interesting to investigate if there is a relationship between
+                    age demographics and provision of amenities. 
+                    <br>
+                    <br>
+                    This could serve as a starting point to identify if there are any gaps in terms of provision of amenities for
+                    older adults as they age-in-place. Provision of such amenities could also benefit the general public, whom also utilize these amenities.
+                </h3>
+            </div>
+
+            <div class = "image"> 
+                <img class = "image3" src = "images/community_garden_2.jpg" >
+                <img class = "image4" src = "images/green_space.jpg">
+            </div>
+        </div>
+
+        <div class = "map_section">
+            <h2 style = "text-align: center; background-color: rgb(230, 230, 230);">
+                Map
+            </h2>
+
+            <h3>
+                The map below illustrates the population count at the subzone level in Singapore using a choropleth map.
+                The darker the colour, the higher the population count. Subzones with zero population counts are shaded in grey.
+                <br>
+                <br>
+                Hover over each subzone for the name of the subzone, corresponding planning area and region and the population count.
+                Zoom in and out of the map for better clarity of the spread of amenities in each planning area and/or subzone.
+                <br>
+                <br>
+                <u> Use the checkboxes to toggle the visibility of the amenities on the map.</u>
+                <br>
+                <u> Click on the subzones for a glimpse into the age demographics of the subzone's resident population.</u>
+            </h3>
+        </div>
+        <br>
+
+        <div class = "checkboxes" style = "font-family: Cambria;"> 
+            <span class = "checkbox-label" style = "margin-left: 180px;">Amenities: </span>
+            <label class="layer-option"><input type="checkbox" id="showCCs" checked> 
+                <span class="color-box" style="background-color: rgb(255, 230, 131);"></span>
+                Community Centres
+            </label>
+            <label class="layer-option"><input type="checkbox" id="showClinics" checked> 
+                <span class="color-box" style="background-color: rgb(131, 207, 255);"></span>
+                CHAS Clinics
+            </label>
+            <label class="layer-option"><input type="checkbox" id="showEldercare" checked> 
+                <span class="color-box" style="background-color: rgb(197, 131, 255);"></span>
+                Eldercare Centres
+            </label>
+        </div>
+
+        <br>
+
+        <div class = "map_elements">
+            <div id = "tooltip" class = "tooltip"></div>
+            <!-- Choropleth map -->
+            <div id = "c_map" class = "map" >
+                <svg id = "choro_map"></svg>
+            </div> 
+
+            <div id = "tooltip_chart" class = "tooltip_chart"></div>
+            <!-- Chart -->
+            <div class = "chart_elements">
+                <svg id = "pieChart" class = "chart" width = "320" height = "380"></svg>
+                <div id = "legend_chart" class = "legend_chart"> </div>
+                <div id="data_table", class = "data_table"></div>
+              </div>
+        </div>
+
+        <div id = "tooltip" class = "tooltip"></div>
+
+        <h2 style = "text-align: center; background-color: rgb(230, 230, 230);">
+            Preliminary Findings
+        </h2>
+        <div class = "findings">
+            <div class="text_2">
+                <h3><strong style = "font-family: Cambria;"> Population numbers </strong> </h3>
+                <ul>
+                    <li>
+                        The <u> East and North-east region</u> of Singapore contains more subzones with <u>larger resident population</u>, and there is a fair distribution of 
+                        amenities in the East.  
+                    </li>
+                    <li>
+                        Areas in <u> Tampines and Bedok</u> are home to a <u> larger proportion of older adults aged 65 and above</u>.
+                    </li>
+                    <li>
+                        In almost all the subzones, there is a <u> substantial proportion of individuals aged 50 to 64 years</u> - the middle-aged adults and "young seniors".
+                    </li>
+                </ul>
+
+                <h3><strong style = "font-family: Cambria;"> Provision of amenities </strong> </h3>
+                <ul>
+                    <li>
+                        For <u> subzones with a larger population</u>, there are often <u> more amenities available</u> in the area.  
+                    </li>
+                    <li>
+                        Subzones with a <u> smaller resident population</u> are also <u> well-provided </u>with amenities, especially the <u> downtown and central areas</u>.
+                    </li>
+                    <li>
+                        While some subzones with smaller populations have fewer amenities, it is likely that these areas are <u> still being developed</u>,
+                        where <u> new housing projects are being built</u>. As residents move in, more amenities could be developed in future, and <u> identifying where these can 
+                        be placed </u>would be necessary.
+                    </li>
+                </ul>
+            </div>
+            <div class = "image_2"> 
+                <img class = "image5" src = "images/family_1.png" >
+                <img class = "image5" src = "images/seniors_2.png" >
+            </div>
+        </div>
+
+        <div class = "conclusion">
+            <h2 style = "text-align: center; background-color: rgb(230, 230, 230);">
+                Conclusion
+            </h2>
+
+            <h3>
+                It seems that the amenities are fairly spread out over the island, where population numbers are greater than zero.
+                However, there are still some gaps that can be seen, such as in the Serangoon and Bukit Timah area.
+                <br>
+                <br>
+                With a <u> growing proportion of individuals aged 50 to 64 years old</u>, 10 years into the future, they will likely be able to
+                benefit from the available amenities in the neighbourhood.
+                There is hence a need to <u> identify any gaps</u> in terms of provision of amenities, so future developments can be established to
+                benefit future generations.
+                <br>
+                <br>
+                It is also important to ensure a <u> balance and variety of amenities</u>, and <u> avoid over-providing</u>, as resources could be used for 
+                other purposes such as housing and unprogrammed public spaces.
+            </h3>
+        </div>
+
+        <div class = "takeways">
+            <button type = "button" class = "collapsible">Takeways from the class</button>
+                <div class = "content">
+                    <h3>
+                        Understanding the WHY (Task), WHAT (Data), HOW (Idiom).
+                        <ul>
+                            <li>
+                                Purpose of developing visualization - Presenation | Story-telling | Exploratory.  
+                            </li>
+                            <li>
+                                Datasets - strengths and limitations (cleaning dataset) .
+                            </li>
+                        </ul>
+                        Use of AI - complementary tool and teammate.
+                        <br>
+                        <br>
+                    </h3>
+                </div>
+        </div>
+        <br>
+
+        <div>
+            <button type = "button" class="collapsible">Data sources</button>
+            <div class = "content">
+                <h3> Datasets used for above visualization retrieved from: 
+                    <a href = "https://www.singstat.gov.sg/publications/population/population-trends"> Resident Population 2024</a>,
+                    <a href = "https://data.gov.sg/datasets?page=1&query=subzone&resultId=d_8594ae9ff96d0c708bc2af633048edfb"> Master Plan 2019 Subzone Boundary</a>,
+                    <a href = "https://data.gov.sg/datasets?page=1&query=chas&resultId=d_548c33ea2d99e29ec63a7cc9edcccedc"> CHAS Clinics</a>,
+                    <a href = "https://data.gov.sg/datasets?page=1&query=community&resultId=d_f91a8b057cfb2bebf2e531ad8061e1c1"> Community Clubs</a> and 
+                    <a href = "https://data.gov.sg/datasets?page=1&query=eldercare&resultId=d_f0fd1b3643ed8bd34bd403dedd7c1533"> Eldercare Services</a>.
+                    
+                </h3>
+            </div>
+        </div>
+
+        <script src = "script.js"> </script>
+        <br>
+
+        <footer> 
+            <h4> 
+                Data retrieved from 
+                <a href = "https://data.gov.sg/"> data.gov.sg </a> and
+                <a href = "https://www.singstat.gov.sg/"> singstat.gov.sg </a>.  
+            </h4>
+
+            <h4>
+                Animated images created by @irasutoya and retrieved from 
+                <a href = "https://www.canva.com/"> data.gov.sg </a>.
+            </h4>
+
+            <h4>
+                Outline of final project idea can be found
+                <a href = "https://kkjy99.github.io/IDV-assignment5/">here</a>.
+            </h4>
+
+            <h4> 
+                02.526 IDV - Final Project | By kkjy99
+            </h4>
+        </footer>
+    </body>
+
+</html>
+<html>
